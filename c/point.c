@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 int main(int argc, char **argv) {
-  int a[10] = {0,1,2,3,};
+  int a[10] = { 0, 1, 2, 3, };
 
   printf("a[1]:       %i\n", a[1]);
   printf("*(a + 2):   %i\n", *(a + 2));
@@ -32,6 +32,14 @@ int main(int argc, char **argv) {
 
   printf("p:          %s\n", p);
   printf("*p:         %i\n", *p);
+  *p++=1;
+  p--;
+  printf("*p++=0:     %i\n", *p);
+  printf("*p:         %i\n", *p);
+  printf("lt[0]:      %i\n", lt[0]);
+  p++;
+  printf("*p:         %i\n", *p);
+  printf("lt[1]:      %i\n", lt[1]);
 
   printf("\n");
 
@@ -48,12 +56,21 @@ int main(int argc, char **argv) {
 
   printf("p:          %s\n", p);
   printf("*p:         %i\n", *p);
+  printf("*p:         %i\n", *p + 1);
+  printf("*p:         %c\n", *p);
+  p += 4;
+  printf("p++\n");
+  printf("*p:         %i\n", *p);
 
+  printf("n:          %s\n", n);
   printf("*n:         %i\n", *n);
   printf("*n:         %c\n", *n);
 
+  printf("i:          %s\n", i);
   printf("*i:         %i\n", *i);
   printf("*i:         %c\n", *i);
+
+  printf("(*i)<<4:    %i\n", (*i) << 4);
 
   return 0;
 }
